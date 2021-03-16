@@ -7,6 +7,8 @@
 BinaryTree* CreateBinaryTree(Node* root);
 Node* CreateNode(char data, Node* leftChild, Node* rightChild);
 void PrintBinaryTreePreorder(BinaryTree* tree);
+void PrintBinaryTreeInorder(BinaryTree* tree);
+void PrintBinaryTreePostorder(BinaryTree* tree);
 
 int main() {
   printf("Generating Binary Tree...");
@@ -38,7 +40,15 @@ int main() {
 
   printf("Printing the Binary Tree in Preorder: ");
   PrintBinaryTreePreorder(tree);
-  
+  printf("\n");
+
+  printf("Printing the Binary Tree in Inorder: ");
+  PrintBinaryTreeInorder(tree);
+  printf("\n");
+
+  printf("Printing the Binary Tree in Postorder: ");
+  PrintBinaryTreePostorder(tree);
+
   getchar();
   return 0;
 }
