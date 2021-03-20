@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "../headers/BinaryTree.h"
 #include "../headers/Node.h"
 

@@ -9,6 +9,7 @@ Node* CreateNode(char data, Node* leftChild, Node* rightChild);
 void PrintBinaryTreePreorder(BinaryTree* tree);
 void PrintBinaryTreeInorder(BinaryTree* tree);
 void PrintBinaryTreePostorder(BinaryTree* tree);
+int SearchBinaryTree(BinaryTree* tree, char target);
 void DeleteBinaryTree(BinaryTree* tree);
 
 /*************************************************************
@@ -17,8 +18,7 @@ void DeleteBinaryTree(BinaryTree* tree);
 * ***********************************************************/
 
 int main() {
-  printf("Generating Binary Tree...");
-  printf("\n");
+  printf("Generating Binary Tree and allocating memory...");
   
   /***************************************
   * Visual Description of the Binary Tree
@@ -41,7 +41,7 @@ int main() {
     )
   );
 
-  printf("The Binary Tree was allocated on memory successfully!");
+  printf("Success!");
   printf("\n");
 
   printf("Printing the Binary Tree in Preorder: ");
@@ -56,12 +56,19 @@ int main() {
   PrintBinaryTreePostorder(tree);
   printf("\n");
 
-  printf("Deleting Binary Tree from memory...");
+  printf("Search for the occurrence of 'c' in Binary Tree...");
+  SearchBinaryTree(tree, 'c') ? printf("Found!") : printf("Not found!");
   printf("\n");
+
+  printf("Search for the occurrence of 'z' in Binary Tree...");
+  SearchBinaryTree(tree, 'z') ? printf("Found!") : printf("Not found!");
+  printf("\n");
+
+  printf("Deleting Binary Tree from memory...");
 
   DeleteBinaryTree(tree);
 
-  printf("Binary Tree deleted from memory successfully!");
+  printf("Success!");
   printf("\n");
 
   // Running Valgrind to confirm that memory has been cleared
@@ -73,6 +80,11 @@ int main() {
   // ==27098== 
   // ==27098== All heap blocks were freed -- no leaks are possible
 
+  printf("\n");
+  printf("Press ENTER to close program...");
+  
   getchar();
   return 0;
 }
+
+// "There is no dark side of the moon, really. Matter of fact it's all dark." //
