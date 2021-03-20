@@ -10,6 +10,7 @@ void PrintBinaryTreePreorder(BinaryTree* tree);
 void PrintBinaryTreeInorder(BinaryTree* tree);
 void PrintBinaryTreePostorder(BinaryTree* tree);
 int SearchBinaryTree(BinaryTree* tree, char target);
+int ComputeBinaryTreeHeight(BinaryTree* tree);
 void DeleteBinaryTree(BinaryTree* tree);
 
 /*************************************************************
@@ -62,6 +63,10 @@ int main() {
 
   printf("Search for the occurrence of 'z' in Binary Tree...");
   SearchBinaryTree(tree, 'z') ? printf("Found!") : printf("Not found!");
+  printf("\n");
+
+  printf("Computing the height of the Binary Tree...");
+  printf("The height is %d.", ComputeBinaryTreeHeight(tree));
   printf("\n");
 
   printf("Deleting Binary Tree from memory...");

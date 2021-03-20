@@ -12,6 +12,7 @@
 *
 * @param root is the root Node of a Binary Tree
 * @param target is the char that will be searched
+* @return if the target has been found within the Node
 * ***********************************************************/
 
 int SearchNode(Node* root, char target) {
@@ -30,6 +31,7 @@ int SearchNode(Node* root, char target) {
 *
 * @param tree is a Binary Tree
 * @param target is the char that will be searched
+* @return if the target has been found within the Binary Tree
 * ***********************************************************/
 
 int SearchBinaryTree(BinaryTree* tree, char target) {
